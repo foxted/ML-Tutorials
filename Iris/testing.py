@@ -1,6 +1,6 @@
 import numpy as np
-from sklearn.datasets import load_iris
 from sklearn import tree
+from sklearn.datasets import load_iris
 
 # initial data
 iris = load_iris()
@@ -25,6 +25,7 @@ print clf.predict(test_data)
 # visualization
 from sklearn.externals.six import StringIO
 import pydotplus
+
 dot_data = StringIO()
 tree.export_graphviz(clf,
                      out_file=dot_data,
